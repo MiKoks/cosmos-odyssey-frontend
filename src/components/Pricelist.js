@@ -9,6 +9,7 @@ function Pricelist() {
   const apiBaseUrl = process.env.REACT_APP_API_BASE_URL || 'http://127.0.0.1:8000';
 
   useEffect(() => {
+    const apiBaseUrl = process.env.REACT_APP_API_BASE_URL || 'http://127.0.0.1:8000';
     axios
       .get(`${apiBaseUrl}/api/all-pricelists`)
       .then((response) => {

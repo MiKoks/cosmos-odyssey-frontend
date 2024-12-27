@@ -30,6 +30,7 @@ function ReservationForm() {
   const apiBaseUrl = process.env.REACT_APP_API_BASE_URL || 'http://127.0.0.1:8000';
 
   useEffect(() => {
+    const apiBaseUrl = process.env.REACT_APP_API_BASE_URL || 'http://127.0.0.1:8000';
     axios
       .get(`${apiBaseUrl}/api/pricelists`)
       .then((response) => {
@@ -60,7 +61,7 @@ function ReservationForm() {
       params.append('sortKey', key);
       params.append('sortOrder', order);
     }
-
+    const apiBaseUrl = process.env.REACT_APP_API_BASE_URL || 'http://127.0.0.1:8000';
     axios
       .get(`${apiBaseUrl}/api/findRoutes?${params.toString()}`)
       .then((response) => {
